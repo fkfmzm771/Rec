@@ -1,10 +1,18 @@
+import javax.swing.*;
+import java.awt.*;
 import java.util.*;
 
 public class Solution {
 
 	public static void main(String[] args) {
 
-		rec(20);
+		try {
+			rec((Integer.parseInt(JOptionPane.showInputDialog("숫자를 넣어주세요"))));
+		} catch (NumberFormatException e) {
+			System.out.println("입력받지 못했습니다");
+		} catch (HeadlessException e) {
+			System.out.println("입력받지 못했습니다");
+		}
 
 	}
 
